@@ -1,6 +1,6 @@
 {
   "name": "some-colours",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for conversion between Hex, Hex3, Hex8, RGB, RGBA and CMYK.",
   "main": "build/main.js",
   "types": "build/main.d.ts",
@@ -10,7 +10,7 @@
   "author": "jeromin-a-um-hi",
   "license": "MIT",
   "dependencies": {
-    "hex-to-int": "^1.0.3"
+    "hex-to-int": "^1.0.4"
   },
   "devDependencies": {},
   "repository": {

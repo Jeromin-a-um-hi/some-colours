@@ -282,7 +282,7 @@ class Hex3 extends ColourType {
         const convertedB = hexToInt(unconvertedB).toString();
         const A = "255";
 
-        return new Intermediate([convertedR, convertedG, convertedB, A, this.isLowerCase?]);
+        return new Intermediate([convertedR, convertedG, convertedB, A], this.isLowerCase);
     }
 
     private checkIfLowerCase(value){
