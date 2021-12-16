@@ -10,5 +10,20 @@
   "license": "MIT",
   "dependencies": {
     "hex-to-int": "^1.0.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeromin-a-um-hi/some-colours.git"
+  },
+  "keywords": [
+    "colour",
+    "color",
+    "conversion",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/Jeromin-a-um-hi/some-colours/issues"
+  },
+  "homepage": "https://github.com/Jeromin-a-um-hi/some-colours#readme"
 }
