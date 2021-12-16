@@ -20,6 +20,10 @@ module StringMethods {
 
         return true;
     }
+
+    export function removeTrailingZeroes (string: string): string {
+        return `${parseFloat(string)}`;
+    }
 }
 
 
@@ -37,7 +41,7 @@ class Intermediate {
      */
     toRGBA(): RGBA{
         const a = parseFloat((Number(this.value[3]) / 255).toFixed(2).toString()).toString();
-        return new RGBA([this.value[0], this.value[1], this.value[2], (Number(this.value[3]) / 255).toFixed(3)]);
+        return new RGBA([this.value[0], this.value[1], this.value[2], StringMethods.removeTrailingZeroes((Number(this.value[3]) / 255).toFixed(3))]);
     }
 
     /**
@@ -278,7 +282,7 @@ class Hex3 extends ColourType {
         const convertedB = hexToInt(unconvertedB).toString();
         const A = "255";
 
-        return new Intermediate([convertedR, convertedG, convertedB, A, this.isLowerCase]);
+        return new Intermediate([convertedR, convertedG, convertedB, A, this.isLowerCase?]);
     }
 
     private checkIfLowerCase(value){

@@ -1,6 +1,6 @@
 {
   "name": "hex-to-int",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Hexadecimal to integer convertor.",
   "main": "build/hex-to-int.js",
   "scripts": {
