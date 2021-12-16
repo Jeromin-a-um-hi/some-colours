@@ -39,6 +39,10 @@ var StringMethods;
         return true;
     }
     StringMethods.stringArrayCheck = stringArrayCheck;
+    function removeTrailingZeroes(string) {
+        return "" + parseFloat(string);
+    }
+    StringMethods.removeTrailingZeroes = removeTrailingZeroes;
 })(StringMethods || (StringMethods = {}));
 var Intermediate = /** @class */ (function () {
     function Intermediate(value, isLowerCase) {
@@ -52,7 +56,7 @@ var Intermediate = /** @class */ (function () {
      */
     Intermediate.prototype.toRGBA = function () {
         var a = parseFloat((Number(this.value[3]) / 255).toFixed(2).toString()).toString();
-        return new RGBA([this.value[0], this.value[1], this.value[2], (Number(this.value[3]) / 255).toFixed(3)]);
+        return new RGBA([this.value[0], this.value[1], this.value[2], StringMethods.removeTrailingZeroes((Number(this.value[3]) / 255).toFixed(3))]);
     };
     /**
      * Intermediate -> RGB
@@ -276,7 +280,7 @@ var Hex3 = /** @class */ (function (_super) {
         var convertedG = hex_to_int_1.hexToInt(unconvertedG).toString();
         var convertedB = hex_to_int_1.hexToInt(unconvertedB).toString();
         var A = "255";
-        return new Intermediate([convertedR, convertedG, convertedB, A, this.isLowerCase]);
+        return new Intermediate([convertedR, convertedG, convertedB, A], this.isLowerCase);
     };
     Hex3.prototype.checkIfLowerCase = function (value) {
         var CHECK_LOWER = /[a-f]/;
