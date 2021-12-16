@@ -2,7 +2,8 @@
   "name": "some-colours",
   "version": "1.0.0",
   "description": "Library for conversion between Hex, Hex3, Hex8, RGB, RGBA and CMYK.",
-  "main": "index.js",
+  "main": "build/main.js",
+  "types": "build/main.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
